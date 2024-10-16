@@ -21,12 +21,40 @@ bears$MONTH<- as.factor(bears$MONTH)
 ## Model LENGTH ~ NECK  this is an example  
 
 ```{r}
-simp <- lm(LENGTH~NECK,data=bears)
+simp <- lm(LENGTH~WEIGHT,data=bears)
 plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
 
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
 
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~NECK,data=bears)
+abline(simp)
+summary.lm(simp)
+```
 ## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+
+
+ This data shows age is the least accurate furthes from 1. Age ranking from  0.5073. The closest to one is Head Length ranking at 0.8434. The least acurate to closest begis at, age width, weigh, neck, chest and closest to 1 is Head Length. In the samw order the aadjusted r square begins from age ( 0.5073), width (0.5321), weight (0.7423), neck ( 0.747), chest (0.7869), headlength (0.8434). This data proves head length is the most accursate and closest to one. 
 
